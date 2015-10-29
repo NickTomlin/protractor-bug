@@ -1,0 +1,17 @@
+{
+  "name": "protractor-bug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "protractor ./protractor.conf.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "protractor": "2.5.1"
+  },
+  "dependencies": {
+    "angular": "1.4.7"
+  }
+}
