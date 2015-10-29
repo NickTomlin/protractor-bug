@@ -4,23 +4,24 @@ describe('Start page', () => {
 	});
 
 	it('p2', () => {
-    browser.get('/');
-		element(by.cssContainingText('.project', 'e2e_test_1446041274270')).click().then(() => {
-			console.log('Click worked!');
-			$('.module-button.builder').click();
-		}, () => {
-			console.log('Click failed!');
-		});
+    // the timeout can be resolved by browser.get('/') ing or manually waiting for angular :\
+    element(by.cssContainingText('.project', 'e2e_test_1446041274270')).click().then(() => {
+      console.log('Click worked!');
+    }, () => {
+      console.log('Click failed!');
+    });
 
-		browser.actions()
-			.mouseMove(element(by.cssContainingText('.lg-menu-link', 'Models')))
-			.perform();
-		element(by.cssContainingText('.lg-menu-link', 'New Model')).click();
-		element(by.cssContainingText('.model-type .btn', 'Fuzzy Logic')).click();
-		element(by.cssContainingText('.tab-button-link', 'FL Settings')).click();
-		element(by.cssContainingText('.tab-button-link', 'Create New Model')).click();
-		browser.takeScreenshot();
-		browser.getCapabilities();
-		// browser.pause();
-	}, 1000 * 60 * 3);
+    // removing this seems to fix things as well
+    browser.actions()
+      .mouseMove($('.test0'))
+      .perform();
+
+    $('.test1').click();
+    $('.test2').click();
+    $('.test3').click();
+
+    browser.takeScreenshot();
+    browser.getCapabilities();
+    // browser.pause();
+  });
 });
