@@ -4,6 +4,7 @@ describe('Start page', () => {
 	});
 
 	it('p2', () => {
+    browser.get('/');
 		element(by.cssContainingText('.project', 'e2e_test_1446041274270')).click().then(() => {
 			console.log('Click worked!');
 			$('.module-button.builder').click();
